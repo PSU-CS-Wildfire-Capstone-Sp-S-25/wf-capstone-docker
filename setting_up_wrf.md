@@ -114,24 +114,43 @@ make -j install > jasper_make_install.log 2>&1
 cd ../../
 ```
 3. Clone WRF and WPS submodules into the home directory
+
 `git clone --recurse-submodule https://github.com/wrf-model/WRF.git`
+
 `git clone --recurse-submodule https://github.com/wrf-model/WPS.git`
+
 4. Change into the WRF directory and run the configure script
+
 `cd ~/WRF/`
+
 `./configure`- this will prompt you for some options. For the first one use 34,1 and for the second one use the default
+
 5. Compile WRF
+
 `./compile em_fire >& log.compile`
+
 6. Change into the WPS directory and run the configure script
+
 `cd ../WPS`
+
 `./configure`- you'll be prompted for an option and should use 1
+
 7. Compile WPS
+
 `./compile`
+
 8. Run a test!
+
 `cd ../WRF/test/em_fire/`
+
 `ln -sf namelist.input_two_fires namelist.input`
+
 `ln -sf input_sounding_two_fires input_sounding`
+
 `./ideal.exe `
+
 `./wrf.exe`
+
 
 ```
 Quilting with   1 groups of   0 I/O tasks.
