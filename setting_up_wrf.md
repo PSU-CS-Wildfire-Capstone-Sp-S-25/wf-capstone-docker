@@ -62,7 +62,7 @@ echo -e "configuring netcdf-c\n"
 echo -e "running make on netcdf-c\n"
 make -j > netcdf-c_make.log 2>&1
 echo -e "running make install on netcdf-c\n"
-make -j install netcdf-c_make_install.log 2>&1
+make -j install > netcdf-c_make_install.log 2>&1
 cd ..
 
 echo -e "starting on netcdf-fortran\n"
@@ -74,7 +74,7 @@ echo -e "configuring netcdf-fortran\n"
 echo -e "running make on netcdf-fortran\n"
 make -j > netcdf-fortran_make.log 2>&1
 echo -e "running make install on netcdf-fortran\n"
-make -j install netcdf-fortran_make_install.log 2>&1
+make -j install > netcdf-fortran_make_install.log 2>&1
 cd ..
 
 echo -e "starting on mpich\n"
