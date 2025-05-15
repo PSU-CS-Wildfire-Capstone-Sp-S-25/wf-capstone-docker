@@ -33,3 +33,6 @@ might be a potential race condition when using a higher number here.
 `./ideal.exe `
 
 `./wrf.exe`
+
+# Steps to create a spack package to install from the package.py
+- Coming soon
